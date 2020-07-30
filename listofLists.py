@@ -1,5 +1,10 @@
-i = int ( input("Enter No. of Row: ") )
-j = int ( input("Enter No. of Column: ") )
+while True:
+    try:
+        i = int ( input("Enter No. of Row: ") )
+        j = int ( input("Enter No. of Column: ") )
+        break
+    except:
+        print('enter int value')
 
 a=[]
 for r_i in range(0,i):
@@ -9,7 +14,12 @@ for r_i in range(0,i):
 
 for r_i in range(0,i):
     for c_i in range(0,j):
-        a[r_i][c_i] = int( input("Enter the Value: ") )
+        while True:
+            try:
+                a[r_i][c_i] = int( input("Enter the Value: ") )
+                break
+            except ValueError:
+                print('enter int value')
 
 
 r_i = 0
@@ -20,3 +30,4 @@ while r_i<i:
 		c_i = c_i+1
 	print("\n")
 	r_i=r_i+1
+
